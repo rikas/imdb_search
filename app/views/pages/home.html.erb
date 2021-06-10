@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= form_tag movies_path, method: :get, class: 'mb-3' do %>
+  <%= text_field_tag :query, params[:query],
+    class: "form-control",
+    placeholder: "Find a movie"
+  %>
+  <%= submit_tag 'Search', name: nil, class: 'btn btn-primary' %>
+<% end %>
